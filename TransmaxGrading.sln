@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransmaxGrading", "TransmaxGrading\TransmaxGrading.csproj", "{313B3A46-2BD4-4493-B1DD-BD7AAD0A4D71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransmaxGrading.Tests", "TransmaxGrading.Tests\TransmaxGrading.Tests.csproj", "{04EA1232-71F9-451B-919B-CA1D29B2ADB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransmaxGrading.Tests", "TransmaxGrading.Tests\TransmaxGrading.Tests.csproj", "{F35EBF0B-8EA9-43E2-A4D3-72C5860F5EFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{313B3A46-2BD4-4493-B1DD-BD7AAD0A4D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{313B3A46-2BD4-4493-B1DD-BD7AAD0A4D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{313B3A46-2BD4-4493-B1DD-BD7AAD0A4D71}.Release|Any CPU.Build.0 = Release|Any CPU
-		{04EA1232-71F9-451B-919B-CA1D29B2ADB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{04EA1232-71F9-451B-919B-CA1D29B2ADB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{04EA1232-71F9-451B-919B-CA1D29B2ADB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{04EA1232-71F9-451B-919B-CA1D29B2ADB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F35EBF0B-8EA9-43E2-A4D3-72C5860F5EFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F35EBF0B-8EA9-43E2-A4D3-72C5860F5EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F35EBF0B-8EA9-43E2-A4D3-72C5860F5EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F35EBF0B-8EA9-43E2-A4D3-72C5860F5EFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
