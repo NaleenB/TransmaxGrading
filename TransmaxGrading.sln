@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransmaxGrading", "Transmax
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransmaxGrading.Tests", "TransmaxGrading.Tests\TransmaxGrading.Tests.csproj", "{F35EBF0B-8EA9-43E2-A4D3-72C5860F5EFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransmaxGrading.2.Tests", "TransmaxGrading.2.Tests\TransmaxGrading.2.Tests.csproj", "{57FCAFFA-A6A2-4189-AD6D-F8FC4A0E6B05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F35EBF0B-8EA9-43E2-A4D3-72C5860F5EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F35EBF0B-8EA9-43E2-A4D3-72C5860F5EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F35EBF0B-8EA9-43E2-A4D3-72C5860F5EFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57FCAFFA-A6A2-4189-AD6D-F8FC4A0E6B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57FCAFFA-A6A2-4189-AD6D-F8FC4A0E6B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57FCAFFA-A6A2-4189-AD6D-F8FC4A0E6B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57FCAFFA-A6A2-4189-AD6D-F8FC4A0E6B05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
