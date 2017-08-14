@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="CustomExceptions\InputException.cs" />
     <Compile Include="DataModels\Scores.cs" />
-    <Compile Include="InputValidator.cs" />
+    <Compile Include="Validator.cs" />
     <Compile Include="Logger\FileLogger.cs" />
     <Compile Include="Logger\ILogger.cs" />
     <Compile Include="Logger\LogSeverity.cs" />

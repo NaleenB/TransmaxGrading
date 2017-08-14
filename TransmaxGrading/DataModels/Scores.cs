@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace TransmaxGrading.DataModels
 {
-    class Scores
+    public class Scores
     {
-        public int Score { get; set; }
+        public Scores()
+        {
+            Names = new List<string>();
+        }
+
+        public double Score { get; set; }
 
         public List<string> Names { get; set; }
     }

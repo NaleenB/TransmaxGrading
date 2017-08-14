@@ -12,7 +12,8 @@ namespace TransmaxGrading
     {
         static void Main(string[] args)
         {
-            //Initializing type of logger
+            //Initializing type of logger to be used in the app
+            //can use reflections to initialize dynamic assembly
             ILogger logger = new FileLogger();
 
             //Initial entry validation
@@ -22,9 +23,11 @@ namespace TransmaxGrading
                 return;
             }
 
+            Validator validator = new Validator(logger);
+
             //File validation and passing
             List<Scores> scores;
-            if (!InputValidator.Validate(args[0], out scores))
+            if (!validator.ValidateAndParse(args[0], out scores))
             {
                 return;
             }

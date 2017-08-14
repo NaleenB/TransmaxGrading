@@ -12,7 +12,7 @@ namespace TransmaxGrading.Logger
     /// writing a simple file logger instead of using
     /// enterprise library or log4net
     /// </summary>
-    class FileLogger : ILogger
+    public class FileLogger : ILogger
     {
         string logFileName = "AppLog.txt";
 

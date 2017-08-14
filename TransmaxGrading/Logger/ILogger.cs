@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TransmaxGrading.Logger
 {
-    interface ILogger
+    public interface ILogger
     {
         void LogMessage(LogSeverity severity, string message);
     }
