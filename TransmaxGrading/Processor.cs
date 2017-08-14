@@ -42,9 +42,16 @@ namespace TransmaxGrading
         public void SaveNewFile(string fileName, List<Scores> fileContent)
         {
             string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            path += "\\" + fileName;
+
             try
             {
-                using (StreamWriter w = File.AppendText(path + "\\" + fileName))
+                if (File.Exists(path))
+                {
+                    File.Delete(path);
+                }
+
+                using (StreamWriter w = File.AppendText(path))
                 {
                     foreach (Scores score in fileContent)
                     {
