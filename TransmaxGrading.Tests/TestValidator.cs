@@ -1,9 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TransmaxGrading.DataModels;
 using TransmaxGrading.Logger;
 
@@ -13,13 +9,17 @@ namespace TransmaxGrading.Tests
     public class TestValidator
     {
         Validator validator;
+        Processor processor;
 
         string filePath = @"TestCases\";
 
         public TestValidator()
         {
             ILogger logger = new FileLogger();
+
             validator = new Validator(logger);
+
+            processor = new Processor(logger);
         }
 
 
@@ -87,17 +87,6 @@ namespace TransmaxGrading.Tests
         }
 
         [TestMethod]
-        public void TestTwoNumbersInLine()
-        {
-            List<Scores> scores;
-            bool result = validator.ValidateAndParse(filePath + "twonumbers.txt", out scores);
-
-            Assert.AreEqual(result, true, "File validation failed");
-
-            Assert.Inconclusive("Not sure whether a student name can be a number hence not validating");
-        }
-
-        [TestMethod]
         public void TestEmptyLineInMiddle()
         {
             List<Scores> scores;
@@ -105,6 +94,19 @@ namespace TransmaxGrading.Tests
 
             Assert.AreEqual(result, false, "File validation passed");
         }
+
+        [TestMethod]
+        public void TestTwoNumbersInLine()
+        {
+            List<Scores> scores;
+            bool result = validator.ValidateAndParse(filePath + "twonumbers.txt", out scores);
+
+            Assert.AreEqual(result, true, "File validation failed");
+
+            scores = processor.OrderList(scores);
+
+            processor.SaveNewFile("twonumbers-graded.txt", scores);
+        }        
 
         [TestMethod]
         public void TestProperFormatFile()
@@ -115,6 +117,10 @@ namespace TransmaxGrading.Tests
             Assert.AreEqual(result, true, "File validation failed");
 
             Assert.IsTrue(scores.Count > 0, "File content not parsed correctly");
+
+            scores = processor.OrderList(scores);
+
+            processor.SaveNewFile("properformat-graded.txt", scores);
         }
     }
 }

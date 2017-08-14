@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TransmaxGrading.DataModels;
 using TransmaxGrading.Logger;
 
@@ -18,6 +16,13 @@ namespace TransmaxGrading
             this.logger = logger;
         }
 
+        /// <summary>
+        /// Validates file content
+        /// Parses the file content in to a list of objects
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <param name="scores"></param>
+        /// <returns></returns>
         public bool ValidateAndParse(string fileName, out List<Scores> scores)
         {
             scores = new List<Scores>();
@@ -46,7 +51,7 @@ namespace TransmaxGrading
                 string[] items = line.Split(',');
 
                 //if line does not have a name and a score
-                if (items.Length < 2)
+                if (items.Length != 3)
                 {
                     logger.LogMessage(LogSeverity.Warning, string.Format("File:{0}, line:{1} has missing name or score", fileName, lineNum));
                     return false;
@@ -73,10 +78,9 @@ namespace TransmaxGrading
 
                 scoreObj.Score = score;
 
-                for (int i = 0; i < items.Length - 1; i++)
-                {
-                    scoreObj.Names.Add(items[i]);
-                }
+                scoreObj.LastName = items[0];
+
+                scoreObj.FirstName = items[1];
 
                 scores.Add(scoreObj);
             }

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.IO;
 using TransmaxGrading.DataModels;
 using TransmaxGrading.Logger;
 
@@ -33,9 +30,13 @@ namespace TransmaxGrading
             }
 
             //Processing
+            Processor processor = new Processor(logger);
+            scores = processor.OrderList(scores);
 
-
-            //Writing to output file
+            //Saving new file
+            string newFileName = Path.GetFileNameWithoutExtension(args[0]);
+            newFileName += "-graded.txt";
+            processor.SaveNewFile(newFileName, scores);
         }
     }
 }
