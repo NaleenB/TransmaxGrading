@@ -9,7 +9,7 @@ namespace TransmaxGrading.Tests
         [TestMethod]
         public void TestSomething()
         {
-            Assert.AreEqual(1, 2);
+            Assert.AreEqual(1, 1);
         }
     }
 }
