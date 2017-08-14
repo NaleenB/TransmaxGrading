@@ -53,7 +53,7 @@ namespace TransmaxGrading
                 //if line does not have a name and a score
                 if (items.Length != 3)
                 {
-                    logger.LogMessage(LogSeverity.Warning, string.Format("File:{0}, line:{1} has missing name or score", fileName, lineNum));
+                    logger.LogMessage(LogSeverity.Warning, string.Format("File:{0}, line:{1} has invalid format. Please use last name, first name followed by score", fileName, lineNum));
                     return false;
                 }
 
